@@ -202,12 +202,17 @@ export const useMinesweeper = ({ rows, cols, mines }: UseMinesweeperProps) => {
     setFirstClick(true);
   }, [initializeBoard]);
 
-  // Inicializar el tablero al montar
+  // Inicializar el tablero al montar o cuando cambien las dimensiones
   useEffect(() => {
-    if (board.length === 0) {
-      setBoard(initializeBoard());
-    }
-  }, [board.length, initializeBoard]);
+    setBoard(initializeBoard());
+    setGameStatus('playing');
+    setFirstClick(true);
+  }, [rows, cols, mines, initializeBoard]);
+
+  // Contar banderas colocadas
+  const flaggedCount = board.reduce((count, row) => {
+    return count + row.filter((cell) => cell.state === 'flagged').length;
+  }, 0);
 
   return {
     board,
@@ -215,6 +220,7 @@ export const useMinesweeper = ({ rows, cols, mines }: UseMinesweeperProps) => {
     revealCell,
     toggleFlag,
     resetGame,
+    flaggedCount,
   };
 };
 
