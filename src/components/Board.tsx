@@ -22,7 +22,7 @@ export const Board = () => {
   const [difficulty, setDifficulty] = useState<Difficulty>('easy');
   const config = difficulties[difficulty];
   
-  const { board, gameStatus, revealCell, toggleFlag, resetGame, flaggedCount } = useMinesweeper({
+  const { board, revealCell, toggleFlag, resetGame, flaggedCount } = useMinesweeper({
     rows: config.rows,
     cols: config.cols,
     mines: config.mines,
