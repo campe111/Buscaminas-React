@@ -2,8 +2,8 @@ import { Board } from './components/Board';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-custom flex flex-col items-center justify-center relative px-2 md:px-4">
-      <div className="flex-1 flex items-center justify-center w-full">
+    <div className="min-h-screen bg-gradient-custom flex flex-col items-center justify-center relative">
+      <div className="flex-1 flex items-center justify-center w-full px-2 md:px-4">
         <Board />
       </div>
       
