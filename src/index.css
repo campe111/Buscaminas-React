@@ -11,3 +11,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.bg-gradient-custom {
+  background: linear-gradient(to bottom right, 
+    #000000 0%, 
+    #393838 25%, 
+    #bec0be 50%, 
+    #474747 75%, 
+    #000000 100%);
+}
+
+.title-buscaminas {
+  font-family: 'Algerian', serif;
+  letter-spacing: 0.2em;
+}
