@@ -36,7 +36,7 @@ export const Cell = ({ cell, onReveal, onToggleFlag }: CellProps) => {
   };
 
   const getCellClassName = () => {
-    const baseClasses = 'w-10 h-10 border-2 border-gray-600 flex items-center justify-center font-bold text-sm cursor-pointer transition-colors';
+    const baseClasses = 'w-7 h-7 md:w-10 md:h-10 border-2 border-gray-600 flex items-center justify-center font-bold text-xs md:text-sm cursor-pointer transition-colors';
     
     if (cell.state === 'revealed') {
       if (cell.isMine) {
